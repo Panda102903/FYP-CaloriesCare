@@ -7,11 +7,11 @@
 
 .explore-menu-list-item img {
     width: 7.5vw;
-    min-width: 80px;
+    width: 100px;
     cursor: pointer;
-    height: 70px;
-    border-radius: 50%;  
+    height: 100px; 
     transition: 0.2s;
+    border-radius: 50%;
 }
 
 .explore-menu h1{

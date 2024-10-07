@@ -9,7 +9,6 @@ const Header = () => {
             <h2>Order your favorite food</h2>
             <p>Choose from a diverse menu</p>
             <button>View Menu</button>
-           
        </div>
     </div>
   )
