@@ -1,8 +1,8 @@
 .header {
     height: 34vw;
     margin: 30px auto;
-    background: url('/background.png');
-    background-size: auto;
+    background-image: url('/background.png');
+    background-size: 1173px 504px;
     position: relative;
 }
 
@@ -16,6 +16,7 @@
     bottom: 10%;
     left:  6vw;
     animation: fadeIn 3s;
+    margin-bottom: 60px;
 }
 .header-contents h1{
     font-weight: 700;

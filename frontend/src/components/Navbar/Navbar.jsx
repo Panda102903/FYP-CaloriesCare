@@ -1,28 +1,33 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import './Navbar.css'
 import { assets } from '../../assets/assets'
+import {Link} from 'react-router-dom'
+import { StoreContext } from '../../context/StoreContext'
 
-  const Navbar = () => {
+  const Navbar = ({setShowLogin}) => {
 
     const [menu,setMenu] = useState("home");
 
+    const {getTotalCartAmount} = useContext(StoreContext)
+
     return (
       <div className='navbar'>
-        <img src={assets.logoRm} className="logo"/>
+        <Link to='/'><img src={assets.logoRm} className="logo"/></Link>
         <ul className="navbar-menu">
-            <li onClick={() => setMenu("home")} className={menu==="home"?"active":""}>Home</li>
-            <li onClick={() => setMenu("menu")} className={menu==="menu"?"active":""}>Menu</li>
-            <li onClick={() => setMenu("contact")} className={menu==="contact"?"active":""}>Contact</li>
-            <li onClick={() => setMenu("privacy")} className={menu==="privacy"?"active":""}>Privacy</li>
+            <Link to='/' onClick={() => setMenu("home")} className={menu==="home"?"active":""}>Home</Link>
+            <a href='#explore-menu' onClick={() => setMenu("menu")} className={menu==="menu"?"active":""}>Menu</a>
+            <a href='#footer' onClick={() => setMenu("contact")} className={menu==="contact-us"?"active":""}>Contact Us</a>
+            <a href='#' onClick={() => setMenu("privacy")} className={menu==="privacy"?"active":""}>Privacy</a>
         </ul>
         <div className="navbar-right">
-            <img src={assets.search} className="search"/> {/* search icon */}
+            <img src={assets.search} className="search"/>
             <div className='navbar-search-icon'>
-            <img src={assets.cart} className="cart"/> {/*Shopping cart icon */}
-                <div className='dot'></div>
+            <Link to='/cart'>
+            <img src={assets.cart} className="cart"/>
+            </Link> 
+                <div className={getTotalCartAmount()===0?"":"dot"}></div>
             </div>
-        
-            <button>sign in</button>
+            <button onClick={()=>setShowLogin(true)}>Sign in</button>
         </div>
       </div>
     )

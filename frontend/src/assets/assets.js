@@ -12,6 +12,8 @@ import remove_icon_red from './img/remove.png'
 import facebook_icon from './img/facebook.png'
 import instagram_icon from './img/instagram.png'
 import tiktok_icon from './img/tiktok.png'
+import cross_icon from './img/cross.png'
+
 export const assets = {
     ava_panda,
     search,
@@ -23,6 +25,7 @@ export const assets = {
     facebook_icon,
     instagram_icon,
     tiktok_icon,
+    cross_icon
 }
 
 export const menu_list = [
