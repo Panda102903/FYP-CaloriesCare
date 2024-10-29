@@ -1,11 +1,11 @@
-.navbar{
+.navbar {
     padding: 20px 0px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.navbar .logo{
+.navbar .logo {
     width: 180px;
     height: 90px;
 }
@@ -13,14 +13,14 @@
 .navbar .search {
     width: 22px;
     height: 22px;
-}   
+}
 
 .navbar .cart {
     width: 32px;
     height: 32px;
 }
 
-.navbar-menu{
+.navbar-menu {
     display: flex;
     list-style: none;
     gap: 20px;
@@ -28,13 +28,13 @@
     font-size: 18px;
 }
 
-.navbar-right{
+.navbar-right {
     display: flex;
     align-items: center;
     gap: 40px;
 }
 
-.navbar button{
+.navbar button {
     background: transparent;
     font-size: 16px;
     color: #49557e;
@@ -45,34 +45,34 @@
     transition: 0.3s;
 }
 
-.navbar button:hover{
+.navbar button:hover {
     background-color: #fff4f2;
 }
 
-.navbar .active{
+.navbar .active {
     padding-bottom: 2px;
     border-bottom: 2px solid #49557e;
 }
 
-.navbar li{
-    cursor: pointer;   
+.navbar li {
+    cursor: pointer;
 }
 
-.navbar-search-icon{
+.navbar-search-icon {
     position: relative;
 }
 
-.navbar-search-icon .cart{
+.navbar-search-icon .cart {
     margin-top: 0;
     padding-top: 0;
 }
 
-.navbar-search-icon .search{
+.navbar-search-icon .search {
     margin-top: 0;
     padding-top: 0;
 }
 
-.navbar-search-icon .dot{
+.navbar-search-icon .dot {
     position: absolute;
     min-width: 10px;
     min-height: 10px;
@@ -81,6 +81,7 @@
     top: -8px;
     right: -8px;
 }
+
 /* 
 @media (max-width:1050px) {
     .navbar .logo{

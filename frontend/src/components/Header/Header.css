@@ -14,27 +14,29 @@
     gap: 1.5vw;
     max-width: 50%;
     bottom: 10%;
-    left:  6vw;
+    left: 6vw;
     animation: fadeIn 3s;
     margin-bottom: 60px;
 }
-.header-contents h1{
+
+.header-contents h1 {
     font-weight: 700;
     color: black;
     font-size: max(4.5vw, 22px);
 }
-.header-contents h2{
+
+.header-contents h2 {
     font-weight: 300;
     color: black;
     font-size: max(3vw, 12px);
 }
 
-.header-contents p{
+.header-contents p {
     color: black;
     font-size: 1vw;
 }
 
-.header-contents button{
+.header-contents button {
     border: none;
     color: white;
     font-weight: 500;

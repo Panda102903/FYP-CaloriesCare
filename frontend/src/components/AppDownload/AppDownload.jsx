@@ -5,11 +5,11 @@ import { assets } from '../../assets/assets'
 const AppDownload = () => {
   return (
     <div className='app-download' id='app-download'>
-      <p>For Better Experience Download <br/> Calorie Care App</p>
-    <div className="app-download-platforms">
-        <img src={assets.play_store}/>
-        <img src={assets.app_store}/>
-    </div>
+      <p>For Better Experience Download <br /> Calorie Care App</p>
+      <div className="app-download-platforms">
+        <img src={assets.play_store} />
+        <img src={assets.app_store} />
+      </div>
     </div>
   )
 }
