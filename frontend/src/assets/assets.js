@@ -13,6 +13,9 @@ import facebook_icon from './img/facebook.png'
 import instagram_icon from './img/instagram.png'
 import tiktok_icon from './img/tiktok.png'
 import cross_icon from './img/cross.png'
+import profile_icon from './img/profile.png'
+import bag_icon from './img/bag.png'
+import logout_icon from './img/logout.png'
 
 export const assets = {
     ava_panda,
@@ -25,7 +28,10 @@ export const assets = {
     facebook_icon,
     instagram_icon,
     tiktok_icon,
-    cross_icon
+    cross_icon,
+    profile_icon,
+    bag_icon,
+    logout_icon
 }
 
 export const menu_list = [
@@ -50,26 +56,34 @@ export const menu_list = [
         menu_image: product1
     },
     {
+        menu_name: "Pure Veg",
+        menu_image: product1
+    },
+    {
         menu_name: "Pasta",
         menu_image: product2
     },
+    {
+        menu_name: "Noodles",
+        menu_image: product1
+    }
 ]
 
-export const food_list = [
-    {
-        _id: "Salad",
-        name: "Greek Salad",
-        image: product1,
-        price: 12,
-        description: "Food provides ....",
-        category: "Salad"
-    },
-    {
-        _id: "Rolls",
-        name: "Spring Roll",
-        image: product2,
-        price: 12,
-        description: "Food provides ....",
-        category: "Rolls"
-    },
-]
+// export const food_list = [
+//     {
+//         _id: "Salad",
+//         name: "Greek Salad",
+//         image: product1,
+//         price: 12,
+//         description: "Food provides ....",
+//         category: "Salad"
+//     },
+//     {
+//         _id: "Rolls",
+//         name: "Spring Roll",
+//         image: product2,
+//         price: 12,
+//         description: "Food provides ....",
+//         category: "Rolls"
+//     },
+// ]
