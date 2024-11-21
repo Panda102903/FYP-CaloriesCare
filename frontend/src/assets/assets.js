@@ -68,22 +68,3 @@ export const menu_list = [
         menu_image: product1
     }
 ]
-
-// export const food_list = [
-//     {
-//         _id: "Salad",
-//         name: "Greek Salad",
-//         image: product1,
-//         price: 12,
-//         description: "Food provides ....",
-//         category: "Salad"
-//     },
-//     {
-//         _id: "Rolls",
-//         name: "Spring Roll",
-//         image: product2,
-//         price: 12,
-//         description: "Food provides ....",
-//         category: "Rolls"
-//     },
-// ]

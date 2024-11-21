@@ -52,4 +52,9 @@ const removeFood = async (req, res) => {
     }
 }
 
-export { addFood, listFood, removeFood }
+//edit food item
+const editFood = async (req, res) => {
+    
+}
+
+export { addFood, listFood, removeFood, editFood }

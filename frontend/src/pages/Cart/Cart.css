@@ -59,6 +59,7 @@
     color: white;
     background-color: tomato;
     width: max(15vw, 200px);
+    margin-top: 20px;
     padding: 12px 0px;
     border-radius: 4px;
     cursor: pointer;
@@ -72,7 +73,7 @@
     color: #555;
 }
 
-.cart-promocode-input {
+.cart-promo-input {
     margin-top: 10px;
     display: flex;
     justify-content: space-between;
@@ -81,14 +82,14 @@
     border-radius: 4px;
 }
 
-.cart-promocode-input input {
+.cart-promo-input input {
     background: transparent;
     border: none;
     outline: none;
     padding-left: 10px;
 }
 
-.cart-promocode-input button {
+.cart-promo-input button {
     width: max(10vw, 150px);
     padding: 12px 5px;
     background-color: black;
