@@ -54,7 +54,36 @@ const removeFood = async (req, res) => {
 
 //edit food item
 const editFood = async (req, res) => {
-    
+    try {
+        const food = await foodModel.findById(req.body.id);
+        if (!food) {
+            return res.json({ success: false, message: "Food item not found" });
+        }
+
+        // Nếu có file hình ảnh mới được tải lên
+        if (req.file) {
+            // Xóa hình ảnh cũ
+            fs.unlink(`uploads/${food.image}`, (err) => {
+                if (err) console.log("Failed to delete old image:", err);
+            });
+            // Gán hình ảnh mới
+            food.image = req.file.filename;
+        }
+
+        // Cập nhật các thuộc tính khác
+        food.name = req.body.name || food.name;
+        food.description = req.body.description || food.description;
+        food.price = req.body.price || food.price;
+        food.category = req.body.category || food.category;
+
+        // Lưu lại vào cơ sở dữ liệu
+        await food.save();
+        res.json({ success: true, message: "Food updated successfully", data: food });
+    } catch (error) {
+        console.log(error);
+        res.json({ success: false, message: "Error updating food item" });
+    }
+
 }
 
 export { addFood, listFood, removeFood, editFood }

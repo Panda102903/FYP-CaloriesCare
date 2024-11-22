@@ -16,6 +16,8 @@ import cross_icon from './img/cross.png'
 import profile_icon from './img/profile.png'
 import bag_icon from './img/bag.png'
 import logout_icon from './img/logout.png'
+import food_delivery from './img/food-delivery.png'
+
 
 export const assets = {
     ava_panda,
@@ -31,7 +33,8 @@ export const assets = {
     cross_icon,
     profile_icon,
     bag_icon,
-    logout_icon
+    logout_icon,
+    food_delivery
 }
 
 export const menu_list = [
