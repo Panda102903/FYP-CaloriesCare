@@ -1,0 +1,154 @@
+/* .order-item{
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 1fr 1fr 1fr;
+    align-items: start;
+    gap: 30px;
+    border: 1px solid tomato;
+    padding: 20px;
+    margin: 30px 0px;
+    font-size: 14px;
+    color: black;
+}
+
+.order-item img{
+    height: 50px;
+    width: 50px;
+}
+
+.order-item-food, .order-item-name {
+    font-weight: 600;
+}
+
+.order-item-name{
+    margin-top: 30px;
+    margin-bottom: 5px;
+}
+
+.order-item-address{
+    margin-bottom: 10px;
+}
+
+.order-item select{
+    background-color: #ffe8e4;
+    border: 1px solid tomato;
+    width: max(10vw,120px);
+    padding: 10px;
+    outline: none;
+}
+ */
+
+
+ .order {
+    padding: 80px 30px; /* Thêm khoảng cách từ navbar */
+    background-color: #F6FAF4; /* Màu nền xanh lá cây pastel */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.order h3 {
+    font-size: 2rem;
+    color: #2F4F4F; /* Xanh đậm nhấn mạnh */
+    margin-bottom: 20px;
+}
+
+.order-list {
+    width: 100%;
+    max-width: 1100px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.order-item {
+    background-color: #FFFFFF;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.order-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.order-item img {
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.order-item div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.order-item-food {
+    font-weight: bold;
+    font-size: 1rem;
+    color: #4D9670;
+}
+
+.order-item-name {
+    font-size: 1.2rem;
+    color: #2F4F4F;
+    font-weight: 600;
+}
+
+.order-item-address p {
+    margin: 0;
+    color: #495057;
+    font-size: 0.9rem;
+}
+
+.order-item-phone {
+    color: #6C757D;
+    font-size: 0.9rem;
+}
+
+.order-item p {
+    margin: 0;
+}
+
+.order-item select {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #A8D5BA;
+    border-radius: 8px;
+    background-color: #FFFFFF;
+    color: #2F4F4F;
+    transition: border-color 0.3s ease;
+}
+
+.order-item select:hover, .order-item select:focus {
+    border-color: #4D9670;
+}
+
+@media (max-width: 768px) {
+    .order-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .order-item img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .order-item select {
+        width: 100%;
+    }
+}

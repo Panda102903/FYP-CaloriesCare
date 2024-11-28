@@ -4,7 +4,7 @@ import profile_image from './img/ava_panda.png'
 import add_icon from './img/add.png'
 import order_icon from './img/clipboard.png'
 import upload_area from './img/upload.png'
-
+import food_delivery from './img/food-delivery.png'
 
 export const assets = {
     ava_panda,
@@ -12,5 +12,6 @@ export const assets = {
     profile_image,
     add_icon,
     order_icon,
-    upload_area
+    upload_area,
+    food_delivery
 }

@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
-import './List.css';
-import axios from 'axios';
-import { toast } from 'react-toastify';
+import React, { useEffect, useState } from 'react'
+import './List.css'
+import axios from 'axios'
+import { toast } from 'react-toastify'
 
 const List = ({ url }) => {
     const [list, setList] = useState([]);
@@ -81,11 +81,11 @@ const List = ({ url }) => {
                         <p>{item.category}</p>
                         <p>{item.price}</p>
                         <div className="actions">
-                            <p onClick={() => setEditData(item)} className="cursor">
+                            <p onClick={() => setEditData(item)} className="edit-cursor">
                                 Edit
                             </p>
-                            <p onClick={() => removeFood(item._id)} className="cursor">
-                                X
+                            <p onClick={() => removeFood(item._id)} className="delete-cursor">
+                                Delete
                             </p>
                         </div>
                     </div>

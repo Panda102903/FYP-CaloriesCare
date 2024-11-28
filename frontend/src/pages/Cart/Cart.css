@@ -97,6 +97,25 @@
     color: white;
     border-radius: 4px;
 }
+.popup-message {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    z-index: 1000;
+}
+
+.popup-message.success {
+    background-color: #4caf50;
+    color: white;
+}
+
+.popup-message.error {
+    background-color: #f44336;
+    color: white;
+}
 
 /* @media (max-width:750px) {
     .cart-bottom{

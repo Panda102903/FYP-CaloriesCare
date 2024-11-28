@@ -10,9 +10,9 @@ const Footer = () => {
                     <img className='logo' src={assets.logoRm} />
                     <p></p>
                     <div className="footer-social-icons">
-                        <img src={assets.facebook_icon} />
-                        <img src={assets.instagram_icon} />
-                        <img src={assets.tiktok_icon} />
+                        <a href='https://www.facebook.com/greenwichculturesclub' target="_blank" rel="noopener noreferrer"><img src={assets.facebook_icon} /></a>
+                        <a href='https://www.instagram.com/gicici_gredn' target="_blank" rel="noopener noreferrer"><img src={assets.instagram_icon} /></a>
+                        <a href='https://www.tiktok.com/@greenwichculturesclub' target="_blank" rel="noopener noreferrer"><img src={assets.tiktok_icon} /></a>
                     </div>
                 </div>
                 <div className="footer-content-center">

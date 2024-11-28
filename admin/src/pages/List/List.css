@@ -1,4 +1,4 @@
-.list-table-format {
+/* .list-table-format {
     display: grid;
     grid-template-columns: 0.5fr 2fr 1fr 1fr 0.5fr;
     align-items: center;
@@ -17,7 +17,7 @@
     width: 50px;
 }
 
-/* Overlay background */
+
 .edit-form-overlay {
     position: fixed;
     top: 0;
@@ -28,7 +28,7 @@
     z-index: 999;
 }
 
-/* Edit form container */
+
 .edit {
     position: fixed;
     top: 50%;
@@ -46,7 +46,7 @@
     gap: 20px;
 }
 
-/* Fields */
+
 .edit-img-upload {
     width: 120px;
     margin: 0 auto;
@@ -86,7 +86,7 @@
     border-radius: 5px;
 }
 
-/* Buttons */
+
 .edit-btn-container {
     display: flex;
     justify-content: flex-end;
@@ -131,5 +131,222 @@
 
     .list-table-format.title {
         display: none;
+    }
+} */
+
+
+.list {
+    padding: 80px 30px;
+    background-color: #F9F9F9;
+    min-height: 100vh;
+}
+
+.list > p {
+    font-size: 2rem;
+    color: #2F4F4F;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 600;
+}
+
+/* Bảng danh sách */
+.list-table {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.list-table-format {
+    display: grid;
+    grid-template-columns: 1.5fr 2fr 1fr 1fr 1fr;
+    gap: 15px;
+    align-items: center;
+    padding: 15px;
+    background: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.list-table-format:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.list-table-format.title {
+    font-weight: bold;
+    background-color: #E7F4E7;
+    color: #4A4A4A;
+}
+
+.list-table-format img {
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.list-table-format p {
+    margin: 0;
+    font-size: 1rem;
+    color: #495057;
+}
+
+.actions p {
+    margin: 0 10px;
+    font-size: 0.9rem;
+    color: #007BFF;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.actions p:hover {
+    color: #0056b3;
+}
+
+.delete-cursor {
+    color: #DC3545 !important;
+}
+
+.delete-cursor:hover {
+    color: #C82333 !important;
+}
+
+/* Nền mờ khi mở form chỉnh sửa */
+.edit-form-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+/* Form chỉnh sửa */
+.edit {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #FFFFFF;
+    width: 90%;
+    max-width: 600px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1100;
+}
+
+.edit h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #2F4F4F;
+    text-align: center;
+}
+
+.edit-img-upload {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.edit-img-upload p {
+    font-size: 0.9rem;
+    color: #6C757D;
+}
+
+.edit-img-upload img {
+    width: 120px;
+    height: 120px;
+    margin-top: 10px;
+    border-radius: 10px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.edit-product-name,
+.edit-product-description,
+.edit-category-price {
+    margin-bottom: 20px;
+}
+
+.edit-category-price {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.edit-category select,
+.edit-price input,
+textarea,
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #A8D5BA;
+    border-radius: 5px;
+    background-color: #FFFFFF;
+    font-size: 1rem;
+    color: #495057;
+    transition: border-color 0.3s;
+}
+
+.edit-category select:hover,
+.edit-price input:focus,
+textarea:focus,
+input:focus {
+    border-color: #4D9670;
+}
+
+/* Nút hành động */
+.edit-btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.edit-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.edit-btn.save {
+    background-color: #4D9670;
+    color: #FFFFFF;
+    border: none;
+}
+
+.edit-btn.save:hover {
+    background-color: #3C7557;
+}
+
+.edit-btn.cancel {
+    background-color: #FFFFFF;
+    color: #4D9670;
+    border: 1px solid #4D9670;
+}
+
+.edit-btn.cancel:hover {
+    background-color: #F6FAF4;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .list-table-format {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .list-table-format img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .edit-category-price {
+        flex-direction: column;
     }
 }
