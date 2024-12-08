@@ -21,8 +21,24 @@ const Add = ({url}) => {
         setData(data => ({ ...data, [name]: value }))
     }
 
+    const validateForm = () => {
+        if (!data.name || !data.description || !data.price || !image) {
+            setError("All fields must be filled in.");
+            return false;
+        }
+        if (Number(data.price) <= 0) {
+            setError("Price must be a positive number.");
+            return false;
+        }
+        setError(null);
+        return true;
+    };
+
     const onSubmitHandler = async (event) => {
         event.preventDefault();
+
+        if (!validateForm()) return;
+
         const formData = new FormData();
         formData.append("name", data.name)
         formData.append("description", data.description)
@@ -55,13 +71,27 @@ const Add = ({url}) => {
                     </label>
                     <input onChange={(e) => setImage(e.target.files[0])} type="file" id="image" hidden required />
                 </div>
-                <div className="add-product-name flex-col">
+                <div className="add-product-name  flex-col">
                     <p>Product Name</p>
-                    <input onChange={onChangeHandler} value={data.name} type="text" name='name' placeholder='Type here' />
+                    <input
+                        onChange={onChangeHandler}
+                        value={data.name}
+                        type="text"
+                        name="name"
+                        placeholder="Type here"
+                        required
+                    />
                 </div>
                 <div className="add-product-description flex-col">
                     <p>Product Description</p>
-                    <textarea onChange={onChangeHandler} value={data.description} name='description' rows="6" placeholder='Write content here' />
+                    <textarea
+                        onChange={onChangeHandler}
+                        value={data.description}
+                        name="description"
+                        rows="6"
+                        placeholder="Write content here"
+                        required
+                    />
                 </div>
                 <div className="add-category-price">
                     <div className="add-category flex-col">
@@ -79,7 +109,7 @@ const Add = ({url}) => {
                     </div>
                     <div className="add-price flex-col">
                         <p>Product Price</p>
-                        <input onChange={onChangeHandler} value={data.price} type="Number" name='price' placeholder='$10' />
+                        <input onChange={onChangeHandler} value={data.price} type="Number" name='price' placeholder='$10' required/>
                     </div>
                 </div>
                 <button type='submit' className='add-btn'>ADD</button>
@@ -90,3 +120,5 @@ const Add = ({url}) => {
 }
 
 export default Add
+
+

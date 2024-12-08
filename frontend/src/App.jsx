@@ -10,7 +10,7 @@ import MyOrders from './pages/MyOrders/MyOrders'
 import Footer from './components/Footer/Footer'
 import LoginPopup from './components/LoginPopup/LoginPopup'
 import Navbar from './components/Navbar/Navbar'
-
+import ChatComponent from './components/Chat/Chat'
 
 const App = () => {
 

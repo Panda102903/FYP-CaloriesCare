@@ -1,154 +1,141 @@
-/* .order-item{
-    display: grid;
-    grid-template-columns: 0.5fr 2fr 1fr 1fr 1fr;
-    align-items: start;
-    gap: 30px;
-    border: 1px solid tomato;
-    padding: 20px;
-    margin: 30px 0px;
-    font-size: 14px;
-    color: black;
-}
-
-.order-item img{
-    height: 50px;
-    width: 50px;
-}
-
-.order-item-food, .order-item-name {
-    font-weight: 600;
-}
-
-.order-item-name{
-    margin-top: 30px;
-    margin-bottom: 5px;
-}
-
-.order-item-address{
-    margin-bottom: 10px;
-}
-
-.order-item select{
-    background-color: #ffe8e4;
-    border: 1px solid tomato;
-    width: max(10vw,120px);
-    padding: 10px;
-    outline: none;
-}
- */
-
-
- .order {
-    padding: 80px 30px; /* Thêm khoảng cách từ navbar */
-    background-color: #F6FAF4; /* Màu nền xanh lá cây pastel */
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
-}
-
-.order h3 {
-    font-size: 2rem;
-    color: #2F4F4F; /* Xanh đậm nhấn mạnh */
-    margin-bottom: 20px;
-}
-
-.order-list {
-    width: 100%;
-    max-width: 1100px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.order-item {
-    background-color: #FFFFFF;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-    flex-wrap: wrap;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.order-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
-}
-
-.order-item img {
-    width: 80px;
-    height: 80px;
-    border-radius: 10px;
-    object-fit: cover;
-    flex-shrink: 0;
-}
-
-.order-item div {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.order-item-food {
-    font-weight: bold;
-    font-size: 1rem;
-    color: #4D9670;
-}
-
-.order-item-name {
-    font-size: 1.2rem;
-    color: #2F4F4F;
-    font-weight: 600;
-}
-
-.order-item-address p {
-    margin: 0;
-    color: #495057;
-    font-size: 0.9rem;
-}
-
-.order-item-phone {
-    color: #6C757D;
-    font-size: 0.9rem;
-}
-
-.order-item p {
-    margin: 0;
-}
-
-.order-item select {
-    padding: 10px;
-    font-size: 1rem;
-    border: 1px solid #A8D5BA;
+.order-page {
+    padding: 30px;
+    background-color: #f7f7f7;
     border-radius: 8px;
-    background-color: #FFFFFF;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Tiêu đề */
+  h3 {
+    font-size: 28px;
     color: #2F4F4F;
-    transition: border-color 0.3s ease;
-}
-
-.order-item select:hover, .order-item select:focus {
-    border-color: #4D9670;
-}
-
-@media (max-width: 768px) {
-    .order-item {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 15px;
-    }
-
-    .order-item img {
-        width: 60px;
-        height: 60px;
-    }
-
-    .order-item select {
-        width: 100%;
-    }
-}
+    font-weight: 600;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  
+  /* Section thống kê tổng quan */
+  .order-summary {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    gap: 20px;
+  }
+  
+  .summary-item {
+    text-align: center;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .summary-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .summary-item h4 {
+    margin: 0;
+    font-size: 18px;
+    color: #555;
+  }
+  
+  .summary-item p {
+    margin-top: 10px;
+    font-size: 24px;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  /* Biểu đồ thống kê trạng thái */
+  .order-statistics-chart {
+    margin-bottom: 30px;
+    max-height: 400px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Danh sách đơn hàng */
+  .order-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+  }
+  
+  .order-item {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(33.333% - 20px);
+    max-width: calc(33.333% - 20px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 20px;
+  }
+  
+  .order-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .order-item img {
+    width: 70px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+  }
+  
+  .order-item-food {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 10px;
+  }
+  
+  .order-item-name {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .order-item-address,
+  .order-item-phone {
+    font-size: 14px;
+    color: #888;
+  }
+  
+  .order-item select {
+    margin-top: 15px;
+    padding: 8px 15px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    color: #555;
+    width: 100%;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .order-item select:hover {
+    background-color: #eaeaea;
+  }
+  
+  .order-item select:focus {
+    outline: none;
+    border-color: #3e8e41;
+    background-color: #fff;
+  }
+  
+  /* Thêm hiệu ứng hover cho từng đơn hàng */
+  .order-item:hover select {
+    background-color: #f0f0f0;
+  }
+  
+  
+  

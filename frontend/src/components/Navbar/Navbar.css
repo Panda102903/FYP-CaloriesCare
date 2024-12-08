@@ -69,7 +69,7 @@
   }
   
   .nav-profile-dropdown li:hover {
-    color: #6a9c43; /* Màu xanh lá cây pastel */
+    color: #6a9c43; 
   }
   
   .navbar .cart {
@@ -92,12 +92,12 @@
   }
   
   .navbar-menu a:hover {
-    color: #6a9c43; /* Màu xanh lá cây pastel */
+    color: #6a9c43; 
   }
   
   .navbar-menu .active {
     padding-bottom: 2px;
-    border-bottom: 2px solid #6a9c43; /* Màu xanh lá cây pastel */
+    border-bottom: 2px solid #6a9c43; 
   }
   
   .navbar-right {
@@ -110,7 +110,7 @@
     background: transparent;
     font-size: 16px;
     color: #49557e;
-    border: 1px solid #6a9c43; /* Màu xanh lá cây pastel */
+    border: 1px solid #6a9c43;
     padding: 10px 30px;
     border-radius: 50px;
     cursor: pointer;
@@ -118,13 +118,13 @@
   }
   
   .navbar button:hover {
-    background-color: #6a9c43; /* Màu xanh lá cây pastel */
+    background-color: #6a9c43;
     color: white;
   }
   
   .navbar .active {
     padding-bottom: 2px;
-    border-bottom: 2px solid #49557e;
+    border-bottom: 2px solid #728156;
   }
   
   .navbar li {
@@ -149,9 +149,19 @@
     position: absolute;
     min-width: 10px;
     min-height: 10px;
-    background-color: #ff4c4c; /* Đỏ cho thông báo */
+    background-color: #ff4c4c; 
     border-radius: 5px;
     top: -8px;
     right: -8px;
   }
   
+
+  .navbar-menu li {
+    font-size: 25px;
+    color: #505f34;
+    text-decoration: none;
+  }
+  
+  .navbar-menu li:hover {
+    color: #6a9c43; 
+  }

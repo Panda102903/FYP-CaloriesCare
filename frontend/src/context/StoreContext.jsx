@@ -98,13 +98,17 @@ const StoreContextProvider = (props) => {
     const url = "http://localhost:4000";
     const [token, setToken] = useState("");
     const [food_list, setFoodList] = useState([]);
-    const [discount, setDiscount] = useState(0); // Giảm giá hiện tại
+
+    const [discount, setDiscount] = useState(0); 
     const [promoCodes, setPromoCodes] = useState({
         SAVE10: 10,
         SAVE20: 20,
         FREESHIP: -2,
-    }); // Danh sách mã giảm giá hợp lệ
+    });
 
+    const clearCart = () => {
+        setCartItems({});
+      };
     // Thêm sản phẩm vào giỏ hàng
     const addToCart = async (itemId) => {
         if (!cartItems[itemId]) {
@@ -149,7 +153,9 @@ const StoreContextProvider = (props) => {
         setCartItems(response.data.cartData);
     };
 
-    // Kiểm tra và áp dụng mã giảm giá
+
+
+
     const applyPromoCode = (code) => {
         const matchedDiscount = promoCodes[code.toUpperCase()];
         if (matchedDiscount) {
@@ -161,7 +167,7 @@ const StoreContextProvider = (props) => {
         }
     };
 
-    // Tính tổng sau khi áp dụng mã giảm giá
+
     const calculateFinalTotal = () => {
         const total = getTotalCartAmount();
         const discountAmount = discount > 0 ? (total * discount) / 100 : 0;
@@ -194,6 +200,7 @@ const StoreContextProvider = (props) => {
         url,
         token,
         setToken,
+        clearCart,
     };
 
     return (

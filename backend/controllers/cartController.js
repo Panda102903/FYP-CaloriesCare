@@ -1,5 +1,4 @@
 import userModel from "../models/userModel.js"
-
 //add items
 const addToCart = async (req, res) => {
     try {

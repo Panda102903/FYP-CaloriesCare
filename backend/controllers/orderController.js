@@ -1,16 +1,19 @@
 import orderModel from "../models/orderModel.js"
 import userModel from "../models/userModel.js"
 import Stripe from "stripe"
-import dotenv from "dotenv";
+import 'dotenv/config'
+
+
 
 // Load .env variables
-dotenv.config();
-
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
+// dotenv.config();
 // const stripe = new Stripe({
 //   apiKey: process.env.STRIPE_SECRET_KEY
 // });
 
+
+
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 
 //placing user order for frontend
 const placeOrder = async (req, res) => {
