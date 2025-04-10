@@ -1,14 +1,6 @@
 <div align="center">
   <h1>FYP-CALORIESCARE</h1>
   <p><em>Empower Your Health Journey, One Calorie at a Time</em></p>
-
-  <!-- Badges -->
-  <p>
-    <img src="https://img.shields.io/github/last-commit/Panda102903/FYP-CaloriesCare?style=flat&logo=git&logoColor=white&color=0080ff" alt="Last Commit" />
-    <img src="https://img.shields.io/github/languages/top/Panda102903/FYP-CaloriesCare?style=flat&color=0080ff" alt="Top Language" />
-    <img src="https://img.shields.io/github/languages/count/Panda102903/FYP-CaloriesCare?style=flat&color=0080ff" alt="Language Count" />
-  </p>
-
   <!-- Tech Stack -->
   <p><strong>Built with:</strong></p>
   <p>
@@ -39,7 +31,6 @@
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
   - [Usage](#usage)
-  - [Testing](#testing)
 - [License](#license)
 
 ---
@@ -63,8 +54,8 @@
 
 ### ✅ Prerequisites
 
-- Node.js
-- Npm
+- Node v22.x.x
+- Npm v10.x.x
 
 ### 🧩 Installation
 
@@ -75,4 +66,21 @@ git clone https://github.com/Panda102903/FYP-CaloriesCare
 cd FYP-CaloriesCare
 cd frontend || backend || admin
 npm install
-npm run dev
+```
+
+Create .env for `backend`
+```bash
+JWT_SECRET="random#secret"
+STRIPE_SECRET_KEY=YOUR_URL_STRIPE_API
+```
+
+### ⚙️ Usage
+- Frontend and Admin: Run `npm run dev` to run local server of each source.
+- Backend: Run `npm run server` to run backend API. Pls check the port of Backend URL, then update it in `context folder` of `frontend` and `App.jsx` of `admin` to ensure it connect and run.
+- Frontend: UI for customer. Customer can view food without login. They need to login to view cart and edit it. User also can checkout and track their order.
+- Admin: CRUD for food and Update status for customer order
+
+## 📝 License
+This project is for educational purposes only.
+
+Please do not copy the full source code without permission.
