@@ -32,15 +32,9 @@ const Navbar = ({ setShowLogin }) => {
 
   return (
     <div className='navbar'>
-      <Link to='/'><img src={assets.logoRm} className="logo" /></Link>
-      {/* <ul className="navbar-menu">
-        <Link to='/' onClick={() => setMenu("home")} className={menu === "home" ? "active" : ""}>Home</Link>
-        <Link to='/#food-display' onClick={() => setMenu("menu")} className={menu === "menu" ? "active" : ""}>Menu</Link>
-        <a href='#food-display' onClick={() => setMenu("menu")} className={menu === "menu" ? "active" : ""}>Menu</a>
-        <a href='#footer' onClick={() => setMenu("contact")} className={menu === "contact-us" ? "active" : ""}>Contact Us</a>
-        <a href='#' onClick={() => setMenu("privacy")} className={menu === "privacy" ? "active" : ""}>Privacy</a>
-      </ul> */}
+      <Link to='/'><img src={assets.logo} className="logo" /></Link>
 
+      {/* <Link to='/'><p>Drana Restaurant</p></Link> */}
       <ul className="navbar-menu">
         <li onClick={scrollToTop}>
         <Link  to='/' onClick={() => setMenu("home")} className={menu === "home" ? "active" : ""}>

@@ -21,24 +21,9 @@ const Add = ({url}) => {
         setData(data => ({ ...data, [name]: value }))
     }
 
-    const validateForm = () => {
-        if (!data.name || !data.description || !data.price || !image) {
-            setError("All fields must be filled in.");
-            return false;
-        }
-        if (Number(data.price) <= 0) {
-            setError("Price must be a positive number.");
-            return false;
-        }
-        setError(null);
-        return true;
-    };
 
     const onSubmitHandler = async (event) => {
         event.preventDefault();
-
-        if (!validateForm()) return;
-
         const formData = new FormData();
         formData.append("name", data.name)
         formData.append("description", data.description)
@@ -105,6 +90,7 @@ const Add = ({url}) => {
                             <option value="Pure Veg">Pure Veg</option>
                             <option value="Pasta">Pasta</option>
                             <option value="Noodles">Noodles</option>
+                            <option value="Beverage">Beverage</option>
                         </select>
                     </div>
                     <div className="add-price flex-col">

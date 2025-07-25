@@ -128,3 +128,9 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+#config database
+.db.js
+
+#uploads image folder
+uploads

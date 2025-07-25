@@ -83,21 +83,20 @@
 // import { useNavigate } from 'react-router-dom';
 
 // const Cart = () => {
-//   const { 
-//     cartItems, 
-//     food_list, 
-//     removeFromCart, 
-//     getTotalCartAmount, 
-//     applyPromoCode, 
-//     calculateFinalTotal, 
-//     discount, 
-//     url 
+//   const {
+//     cartItems,
+//     food_list,
+//     removeFromCart,
+//     getTotalCartAmount,
+//     applyPromoCode,
+//     calculateFinalTotal,
+//     discount,
+//     url
 //   } = useContext(StoreContext);
 
 //   const navigate = useNavigate();
 //   const [promoCode, setPromoCode] = useState("");
 //   const [popupMessage, setPopupMessage] = useState({ visible: false, message: "", type: "" });
-
 
 //   return (
 //     <div className='cart'>
@@ -171,12 +170,11 @@
 
 // export default Cart;
 
-
-import React, { useContext, useState } from 'react';
-import './Cart.css';
-import { StoreContext } from '../../context/StoreContext';
-import { useNavigate } from 'react-router-dom';
-import Popup from '../../components/Popup/Popup';
+import React, { useContext, useState } from "react";
+import "./Cart.css";
+import { StoreContext } from "../../context/StoreContext";
+import { useNavigate } from "react-router-dom";
+import Popup from "../../components/Popup/Popup";
 
 const Cart = () => {
   const {
@@ -192,7 +190,7 @@ const Cart = () => {
   } = useContext(StoreContext);
 
   const navigate = useNavigate();
-  const [promoCode, setPromoCode] = useState('');
+  const [promoCode, setPromoCode] = useState("");
   const [showPopup, setShowPopup] = useState(false);
 
   const handleCheckout = () => {
@@ -200,16 +198,16 @@ const Cart = () => {
       // Hiển thị popup nếu chưa đăng nhập
       setShowPopup(true);
     } else {
-      navigate('/order');
+      navigate("/order");
     }
   };
-    // Scroll to top function
-    const scrollToTop = () => {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth', // Smooth scrolling effect
-      });
-    };
+  // Scroll to top function
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // Smooth scrolling effect
+    });
+  };
 
   return (
     <div className="cart">
@@ -229,7 +227,7 @@ const Cart = () => {
             return (
               <div key={item._id}>
                 <div className="cart-items-title cart-items-item">
-                  <img src={url + '/images/' + item.image} alt={item.name} />
+                  <img src={url + "/images/" + item.image} alt={item.name} />
                   <p>{item.name}</p>
                   <p>${item.price}</p>
                   <p>{cartItems[item._id]}</p>
@@ -257,7 +255,11 @@ const Cart = () => {
             <div className="cart-total-details">
               <p>Discount</p>
               <p>
-                {discount > 0 ? `-${discount}%` : discount === -2 ? 'Free Shipping' : '$0'}
+                {discount > 0
+                  ? `-${discount}%`
+                  : discount === -2
+                  ? "Free Shipping"
+                  : "$0"}
               </p>
             </div>
             <hr />
@@ -270,8 +272,14 @@ const Cart = () => {
               <b>Total</b>
               <b>${calculateFinalTotal()}</b>
             </div>
-            <button onClick={function(event){ handleCheckout(); scrollToTop()}}>PROCEED TO CHECKOUT</button>
-           
+            <button
+              onClick={function (event) {
+                handleCheckout();
+                scrollToTop();
+              }}
+            >
+              PROCEED TO CHECKOUT
+            </button>
           </div>
         </div>
       </div>

@@ -4,7 +4,7 @@
 ### 23/09/2024
 After a sickness week, now I can continue doing my FYP.
 ### 07/10/2024
-Almost finish basic frontend, continute complete frontend with media query (website responsive). Then I will do the sign in and sign up Component.
+Almost finish basic frontend, continue complete frontend with media query (website responsive). Then I will do the sign in and sign up Component.
 ### 14/10/2024
 Complete sign in and sign up features. Then I will start build Backend and Admin.
 ### 22/10/2024

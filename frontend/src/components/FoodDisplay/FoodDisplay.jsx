@@ -24,7 +24,6 @@ const FoodDisplay = () => {
 
   return (
     <div className='food-display' id='food-display'>
-      <h2>Top dishes near you</h2>
       <div className="filters">
         <input
           type="text"
@@ -47,9 +46,10 @@ const FoodDisplay = () => {
           <option value="Pure Veg">Pure Veg</option>
           <option value="Pasta">Pasta</option>
           <option value="Noodles">Noodles</option>
+          <option value="Beverage">Beverage</option>
         </select>
       </div>
-      
+
       <div className="food-display-list">
         {filteredFoods.map((item, index) => (
           <FoodItem

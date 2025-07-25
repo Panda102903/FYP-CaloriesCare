@@ -17,8 +17,8 @@ import profile_icon from './img/profile.png'
 import bag_icon from './img/bag.png'
 import logout_icon from './img/logout.png'
 import food_delivery from './img/food-delivery.png'
-
-
+import logo from './img/logo.jpg'
+import mascot from './img/mascot.jpeg'
 export const assets = {
     ava_panda,
     search,
@@ -34,7 +34,9 @@ export const assets = {
     profile_icon,
     bag_icon,
     logout_icon,
-    food_delivery
+    food_delivery,
+    logo,
+    mascot
 }
 
 export const menu_list = [

@@ -1,9 +1,9 @@
 .header {
-    height: 34vw;
-    margin: 130px auto 30px;
-    background-image: url('/background.png'); /* Đảm bảo đường dẫn đúng */
-    background-size: cover; /* Làm cho hình nền phủ kín */
-    background-position: center; /* Căn giữa hình ảnh */
+    height: 50vw;
+    margin: 110px auto 25px;
+    background-image: url('/banner.png'); /* Đảm bảo đường dẫn đúng */
+    background-size: cover;
+    background-position: center;
     position: relative;
     display: flex;
     justify-content: center;
@@ -17,14 +17,14 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 1.5vw;
-    max-width: 60%; 
+    max-width: 60%;
     bottom: 10%;
     left: 6vw;
     animation: fadeIn 3s ease-out;
     margin-bottom: 60px;
     padding: 15px;
     border-radius: 10px; /* Bo góc nhẹ */
-    left: 6vw; 
+    left: 6vw;
     transform: translateX(-15%) translateY(-10%);
 }
 
@@ -39,7 +39,7 @@
     font-weight: 300;
     color: #333; /* Màu tối cho chữ phụ */
     font-size: max(3vw, 16px); /* Điều chỉnh cho phù hợp */
-    margin-bottom: 1rem;
+    margin-bottom: 5rem;
 }
 
 

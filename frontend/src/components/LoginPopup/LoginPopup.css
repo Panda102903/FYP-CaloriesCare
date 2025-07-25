@@ -268,3 +268,13 @@ button[type="submit"]:hover {
     animation: slideOut 0.5s forwards ease-out;
   }
   
+
+  .toggle-password {
+    cursor: pointer;
+    color: #007bff;
+    margin-left: 10px;
+  }
+  .toggle-password:hover {
+    text-decoration: underline;
+  }
+  

@@ -83,6 +83,21 @@ const verifyOrder = async (req, res) => {
     }
 }
 
+// Cancel Transaction Endpoint
+const cancelOrder = async (req, res) => {
+    try {
+      const { orderId } = req.body;
+  
+      // Tìm và xóa giao dịch
+      await orderModel.findByIdAndDelete(orderId);
+  
+      res.json({ success: true, message: "Transaction canceled successfully" });
+    } catch (error) {
+      console.error("Error canceling transaction:", error);
+      res.status(500).json({ success: false, message: "Failed to cancel transaction" });
+    }
+  };
+
 
 //user orders for frontend
 const userOrders = async (req, res) => {
@@ -118,4 +133,4 @@ const updateStatus = async (req, res) => {
 }
 
 
-export { placeOrder, verifyOrder, userOrders, listOrders, updateStatus }
+export { placeOrder, verifyOrder, userOrders, listOrders, updateStatus, cancelOrder }

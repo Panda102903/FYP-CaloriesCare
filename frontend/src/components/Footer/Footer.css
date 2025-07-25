@@ -59,15 +59,16 @@
 } */
 
 .footer {
-    background-color: #A8D5BA; /* Xanh lá cây pastel */
-    color: #2F4F4F; /* Màu chữ tối nhẹ */
+    background-color: #90030c;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    color: #E5DED7; /* Màu chữ tối nhẹ */
     padding: 40px 20px;
     text-align: center;
     font-family: 'Poppins', sans-serif;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.1); /* Nhẹ nhàng */
-    margin-top: 200px; 
+    margin-top: 200px;
 }
 
 .footer-content {
@@ -78,8 +79,8 @@
     gap: 20px;
 }
 
-.footer-content-left, 
-.footer-content-center, 
+.footer-content-left,
+.footer-content-center,
 .footer-content-right {
     flex: 1 1 200px;
 }
@@ -92,7 +93,7 @@
 .footer-content-left p {
     font-size: 14px;
     margin: 10px 0;
-    color: #4F7942; /* Màu xanh đậm hơn để nổi bật */
+    color: #E5DED7; /* Màu xanh đậm hơn để nổi bật */
 }
 
 .footer-social-icons {
@@ -117,7 +118,7 @@
 .footer-content-right h2 {
     font-size: 20px;
     margin-bottom: 15px;
-    color: #2F4F4F; /* Màu xanh xám đậm */
+    color: black; /* Màu xanh xám đậm */
 }
 
 .footer-content-center ul,
@@ -136,7 +137,7 @@
 
 .footer-content-center ul li:hover,
 .footer-content-right ul li:hover {
-    color: #4F7942; /* Xanh đậm khi hover */
+    color: #1C1C1C; /* Xanh đậm khi hover */
 }
 
 hr {
@@ -147,7 +148,7 @@ hr {
 
 .footer-copyright {
     font-size: 12px;
-    color: #4F7942;
+    color: #FAF8F3;
     margin-top: 10px;
     opacity: 0.8; /* Làm chữ nhẹ nhàng hơn */
 }
